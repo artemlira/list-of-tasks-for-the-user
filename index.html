@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/reset.css">
+   <link rel="stylesheet" href="css/all.css">
+   <link rel="stylesheet" href="css/style.css">
+   <title>Document</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <div class="container">
+         <form action="/" method="post">
+
+
+            <div class="tasks">
+               <h2 class="tasks__title">Виконувані завдання</h2>
+               <div class="tasks__content">
+                  <ul class="task">
+                     <li class="tasks__content__finish fa-solid"></li>
+                     <li class="tasks__content__text">
+                        <input name="name__task" type="text" value="" placeholder="введіть завдання">
+                     </li>
+                     <li class="tasks__content__add fa-solid fa-circle-plus"></li>
+                  </ul>
+               </div>
+            </div>
+
+            <div class="completed__tasks">
+               <h2 class="completed__tasks__title">Виконані завдання</h2>
+               <div class="completed__tasks__content">
+               </div>
+            </div>
+
+         </form>
+      </div>
+   </div>
+   <script src="js/main.js"></script>
+   <script>
+
+      let obj = {
+         wrapper: '.wrapper',
+         tasksContent: '.tasks__content',
+         comletedTasks: '.completed__tasks__content',
+         allLi: 'li',
+         tasks: '.task',
+      }
+
+      let tasks = new Tasks(obj);
+
+      tasks.init();
+
+   </script>
+</body>
+
+</html>
